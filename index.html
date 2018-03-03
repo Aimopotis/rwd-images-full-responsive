@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Image-full-responsive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Image-full-responsive</h1>
+  <h2>With Display Density Descriptor</h2>
+  <img src="wallaby_1x.jpg" alt="Cool image" srcset='wallaby_1x.jpg 1x, wallaby_2x.jpg 2x'>
+
+  <h2>With Width Descriptor</h2>
+  <img class='mediaP' src="large.jpg" alt="Cool image" srcset='small.jpg 500w, medium.jpg 1000w, large.jpg 1600w' sizes="(max-width: 500px) 100vw, 50vw">
+
+
+<h2>Picture Element WebP</h2>
+<picture>
+  <source srcset="kittens.webp" type="image/webp">
+  <img src="kittens.jpg" alt="Two grey tabby kittens">
+</picture>
+
+
+<h2>Picture Element Art Direction</h2>
+<picture>
+  <source media="(min-width: 650px)" srcset="kitten-large.png">
+  <source media="(min-width: 465px)" srcset="kitten-medium.png">
+  <img src="kitten-small.png" alt="Cute kitten">
+</picture>
+
+<h2>Picture Element with @media and Display Density Descriptors </h2>
+<picture>
+  <source
+    media="(min-width: 1000px)"
+    srcset="kookaburra_large_1x.jpg 1x, kookaburra_large_2x.jpg 2x">
+  <source
+    media="(min-width: 500px)"
+    srcset="kookaburra_medium_1x.jpg 1x, kookaburra_medium_2x.jpg 2x">
+  <img src="kookaburra_small.jpg"
+    alt="The kookaburra: a terrestrial tree kingfisher native to Australia and New Guinea">
+</picture>
+</body>
+</html>
